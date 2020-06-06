@@ -38,4 +38,14 @@ public class Team {
     public void setGoals(int goals) {
         this.goals = goals;
     }
+
+    public double getTotalTeamSkill() {
+        double sum = 0;
+
+        for (Player player: players) {
+            sum += player.getSkill();
+        }
+
+        return sum;
+    }
 }

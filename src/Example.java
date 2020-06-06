@@ -3,7 +3,7 @@ import entities.*;
 import java.util.ArrayList;
 
 public class Example {
-    public Team generateBarcelona() {
+    public static Team generateBarcelona() {
 
         Team team = new Team("Barcelona");
         team.addPlayer(new GoalkeeperPlayer("Ter Stegen", 1));
@@ -21,7 +21,7 @@ public class Example {
         return team;
     }
 
-    public Team generatePsg() {
+    public static Team generatePsg() {
         Team team = new Team("Paris Saint Germain");
 
         team.addPlayer(new GoalkeeperPlayer("Rico", 16));

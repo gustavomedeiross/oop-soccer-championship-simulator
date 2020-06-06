@@ -4,8 +4,15 @@ abstract public class Player {
     protected String name;
     protected int number;
     protected Team team;
-    protected int goals;
+    protected int goals = 0;
+
     protected int skill;
+    protected double height;
+    protected double reflexes;
+    protected int coverage;
+    protected int tackle;
+    protected double speed;
+    protected int technique;
 
     public Player() { }
 
@@ -17,6 +24,8 @@ abstract public class Player {
         this.name = name;
         this.number = number;
     }
+
+    abstract double getSkill();
 
     public String getName() {
         return name;
@@ -50,11 +59,11 @@ abstract public class Player {
         this.goals = goals;
     }
 
-    public int getSkill() {
-        return skill;
-    }
-
     public void setSkill(int skill) {
         this.skill = skill;
+    }
+
+    public void scoreGoal() {
+        goals++;
     }
 }
