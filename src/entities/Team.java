@@ -1,5 +1,6 @@
 package entities;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -7,10 +8,10 @@ import java.util.stream.Stream;
 
 public class Team {
     private String name;
-    private List<GoalkeeperPlayer> goalkeeperPlayers;
-    private List<DefenderPlayer> defenderPlayers;
-    private List<MidfielderPlayer> midfielderPlayers;
-    private List<ForwardPlayer> forwardPlayers;
+    private List<GoalkeeperPlayer> goalkeeperPlayers = new ArrayList<>();
+    private List<DefenderPlayer> defenderPlayers = new ArrayList<>();
+    private List<MidfielderPlayer> midfielderPlayers = new ArrayList<>();
+    private List<ForwardPlayer> forwardPlayers = new ArrayList<>();
 
     public Team(String name) {
         this.name = name;

@@ -16,13 +16,10 @@ abstract public class Player {
 
     public Player() { }
 
-    public Player(String name) {
-        this.name = name;
-    }
-
-    public Player(String name, int number) {
+    public Player(String name, int number, int skill) {
         this.name = name;
         this.number = number;
+        this.skill = skill;
     }
 
     abstract double getSkill();

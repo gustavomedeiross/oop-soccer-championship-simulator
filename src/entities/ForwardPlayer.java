@@ -1,15 +1,10 @@
 package entities;
 
 public class ForwardPlayer extends Player {
-    public ForwardPlayer() {
-    }
-
-    public ForwardPlayer(String name) {
-        super(name);
-    }
-
-    public ForwardPlayer(String name, int number) {
-        super(name, number);
+    public ForwardPlayer(String name, int number, int skill, double speed, int technique) {
+        super(name, number, skill);
+        this.speed = speed;
+        this.technique = technique;
     }
 
     @Override

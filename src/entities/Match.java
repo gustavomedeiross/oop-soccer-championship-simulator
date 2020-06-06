@@ -16,6 +16,7 @@ public class Match {
     public Team getWinner() {
         int team1Goals = team1.getGoals();
         int team2Goals = team2.getGoals();
+
         if (team1Goals > team2Goals) {
             return team1;
         } else if (team2Goals > team1Goals) {
@@ -23,6 +24,11 @@ public class Match {
         } else {
             return null;
         }
+    }
+
+    public String getFinalScore() {
+        String output =  team1.getName() + " - " + team1.getGoals() + "\n";
+        return output +  team2.getName() + " - " + team2.getGoals();
     }
 
     public void start() {
@@ -41,6 +47,7 @@ public class Match {
 
             double oddsOfScoringAGoal = getCurrentAttackingTeamOddsOfScoringAGoal(currentAttackingTeam, currentDefendingTeam);
             double randomNumber = Math.random() * 100;
+
             if (oddsOfScoringAGoal > randomNumber) {
                 currentAttackingTeam.scoreGoal();
             }
@@ -54,9 +61,9 @@ public class Match {
         double total = attackerSkills + defenderSkills;
 
         /**
-         * ainda estou divindo o resultado final por 3 porque a chance de se fazer um gol já é naturalmente baixa em um jogo de futebol,
+         * ainda estou divindo o resultado final por 4 porque a chance de se fazer um gol já é naturalmente baixa em um jogo de futebol,
          * mesmo que um time seja muito melhor que o outro, provavelmente o gol não irá acontecer mais que 5 vezes em uma partida
          */
-        return (attackerSkills * 100 / total) / 3;
+        return (attackerSkills * 100 / total) / 4;
     }
 }
